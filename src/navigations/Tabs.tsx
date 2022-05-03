@@ -16,28 +16,36 @@ export default function Tabs() {
       <Tab.Navigator initialRouteName='Dashboard' 
         screenOptions={() => ({
           tabBarActiveTintColor: theme.colors.primary,
-          tabBarInactiveTintColor: theme.colors.common.gray,
+          tabBarInactiveTintColor: theme.colors.text,
           tabBarLabelStyle: {
             fontSize: 15,
             marginBottom: 6
           },
           tabBarStyle: {
-            height: 60
+            height: 60,
+            backgroundColor: theme.colors.surface,
           },
           tabBarIconStyle: {
             marginTop: 5
-          }
+          },
+          headerStyle: {
+            backgroundColor: theme.colors.primary,
+          },
+          headerTitleStyle: {
+            fontSize: 20,
+            color: theme.colors.text
+          },
         })}
       >
         <Tab.Screen name="Chats" component={ChatScreen}
           options={{
-            headerShown: false,
+            title: 'KalApp',
             tabBarIcon: () => (
-                <Ionicons 
-                    color={ theme.colors.primary } 
-                    size={ 25 } 
-                    name="chatbubble-ellipses"
-                />
+              <Ionicons 
+                color={ theme.colors.primary } 
+                size={ 25 } 
+                name="chatbubble-ellipses"
+              />
             )
           }}
         />
@@ -55,7 +63,6 @@ export default function Tabs() {
         />
         <Tab.Screen name="Profile" component={ProfileScreen}
           options={{
-            headerShown: false,
             tabBarIcon: () => (
                 <Ionicons 
                     color={ theme.colors.primary } 
