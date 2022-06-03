@@ -63,7 +63,7 @@ export const ProfileScreen: React.FC = () => {
             />
           </StyledTextInputContainer>
           <View style={{flexDirection: 'row', justifyContent: 'center'}}>
-            <Text style={{textAlignVertical: 'center', fontSize: 24, fontWeight: 'bold'}}>
+            <Text style={{textAlignVertical: 'center', fontSize: 24, fontWeight: 'bold', color: theme.colors.text}}>
               Theme Mode Automatic
             </Text>
             <Switch
@@ -75,7 +75,7 @@ export const ProfileScreen: React.FC = () => {
             />
           </View>
           <View style={{flexDirection: 'row', justifyContent: 'center'}}>
-            <Text style={{textAlignVertical: 'center', fontSize: 24, fontWeight: 'bold'}}>
+            <Text style={{textAlignVertical: 'center', fontSize: 24, fontWeight: 'bold', color: theme.colors.text}}>
               Theme Mode Light/Dark
             </Text>
             <Switch
